@@ -1,17 +1,17 @@
-CC = gcc # C compiler
-CCFLAGS = -O3
-LDFLAGS = -lm
+CC = gcc
+CFLAGS = -Wall
+TARGET = matrix_program
 
-all: mmc
+all: $(TARGET)
 
-mmc: main.o mm.o
-	$(CC) -o $@ $^ $(LDFLAGS)
+$(TARGET): matmult.o matrix.o
+	$(CC) $(CFLAGS) -o $(TARGET) matmult.o matrix.o
 
-mm.o: mm.c
-	$(CC) -c $(CCFLAGS) $<
+matmult.o: matmult.c matmult.h
+	$(CC) $(CFLAGS) -c matmult.c
 
-main.o: main.c
-	$(CC) -c $(CCFLAGS) $<
+matrix.o: matrix.c matmult.h
+	$(CC) $(CFLAGS) -c matrix.c
 
 clean:
-	rm *.o *.mod
+	rm -f *.o $(TARGET)
