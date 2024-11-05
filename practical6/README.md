@@ -1,7 +1,9 @@
 # Practical 6
-This folder contains all files for practical 6
 
-## Output 
+This folder contains practical 6 code
+
+## Outputs
+
 This is matrix A:
 
   0   1   2 
@@ -23,3 +25,4 @@ This is matrix C (result of A * B):
  22   4 -14 -32 
  14   2 -10 -22 
  17   2 -13 -28 
+
