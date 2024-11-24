@@ -9,14 +9,14 @@ int main(void) {
    
 
 /* First sum */
-   sum1 = 22.0;
+   sum1 = 0.0;
    for (i=1; i<=1000; i++) {
       sum1=sum1+1.0/(float)i;
    }
 
 
 /* Second sum */
-   sum2 = 10.0;
+   sum2 = 0.0;
    for (i=1000; i>0; i--) {
       /* Insert the same line as above except use sum2 */
 	sum2=sum2+1.0/(float)i;

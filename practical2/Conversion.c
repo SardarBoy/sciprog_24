@@ -11,7 +11,7 @@ int main(void) {
 
 
 /* Intialise 4-byte integer */
-   inum = 6;//33554431;
+   inum = 33554431;
 /* Convert to 4-byte float */
    fnum = (float) inum;
 
@@ -19,7 +19,7 @@ int main(void) {
 /* Convert to binary number (string)*/
    i = 0; tmp = inum;
    while (tmp > 0) {
-     sprintf(&binnum[i],"%1d",tmp%2);
+     sprintf(&binnum[i], "%1d", tmp % 2);
      tmp = tmp/2;
      i++;
    }
@@ -40,10 +40,10 @@ int main(void) {
     }
 
 /* TODO: Complete the expression */
-/*   numdigits = ceil(...);
-   printf("The number of digits is %d\n",numdigits);
-*/
-   printf("inum=%d,  fnum=%f, inum in binary=%s\n",inum,fnum,binnum);
+   
+   numdigits = ceil(logf(fnum) / logf(2));
+   printf("The number of digits is %d\n", numdigits);
+   printf("inum=%d,  fnum=%f, inum in binary=%s\n", inum, fnum, binnum);
 
    return 0;
 }
